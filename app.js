@@ -2,7 +2,7 @@
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
-const morgan = require('morgan')
+// const morgan = require('morgan')
 
 mongoose.connect("mongodb+srv://glitch:GlItCh@cluster0.tbjsd.mongodb.net/GROWTHSOURCE",{
     useNewUrlParser: true,
@@ -25,7 +25,7 @@ app.use((req, res, next) => {
 })
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(morgan("dev"));
+// app.use(morgan("dev"));
 
 const loanRoutes = require('./src/routes/loanApplication')
 
